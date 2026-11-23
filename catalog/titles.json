@@ -1,0 +1,2390 @@
+[
+  {
+    "id": "the-shop-around-the-corner",
+    "kind": "movie",
+    "title": "The Shop Around the Corner",
+    "year": 1940,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "holiday-inn",
+    "kind": "movie",
+    "title": "Holiday Inn",
+    "year": 1942,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "musical",
+      "romance"
+    ],
+    "classic": true
+  },
+  {
+    "id": "its-a-wonderful-life",
+    "kind": "movie",
+    "title": "It's a Wonderful Life",
+    "year": 1946,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama",
+      "family",
+      "fantasy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "miracle-on-34th-street",
+    "kind": "movie",
+    "title": "Miracle on 34th Street",
+    "year": 1947,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "comedy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "scrooge-1951",
+    "kind": "movie",
+    "title": "Scrooge",
+    "year": 1951,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama",
+      "fantasy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "white-christmas",
+    "kind": "movie",
+    "title": "White Christmas",
+    "year": 1954,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "musical",
+      "romance"
+    ],
+    "classic": true
+  },
+  {
+    "id": "the-apartment",
+    "kind": "movie",
+    "title": "The Apartment",
+    "year": 1960,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "romance",
+      "drama"
+    ],
+    "classic": true
+  },
+  {
+    "id": "dinner-for-one",
+    "kind": "movie",
+    "title": "Dinner for One",
+    "year": 1963,
+    "countries": [
+      "DE"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "classic": true,
+    "holiday": "new-year"
+  },
+  {
+    "id": "rudolph",
+    "kind": "movie",
+    "title": "Rudolph the Red-Nosed Reindeer",
+    "year": 1964,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "musical"
+    ],
+    "classic": true
+  },
+  {
+    "id": "a-charlie-brown-christmas",
+    "kind": "movie",
+    "title": "A Charlie Brown Christmas",
+    "year": 1965,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "grinch-1966",
+    "kind": "movie",
+    "title": "How the Grinch Stole Christmas!",
+    "year": 1966,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "three-wishes-for-cinderella",
+    "kind": "movie",
+    "title": "Three Wishes for Cinderella",
+    "year": 1973,
+    "countries": [
+      "CZ",
+      "DE"
+    ],
+    "languages": [
+      "cs",
+      "de"
+    ],
+    "genres": [
+      "fantasy",
+      "romance",
+      "family"
+    ],
+    "classic": true,
+    "originalTitle": "Tři oříšky pro Popelku"
+  },
+  {
+    "id": "black-christmas",
+    "kind": "movie",
+    "title": "Black Christmas",
+    "year": 1974,
+    "countries": [
+      "CA"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "horror",
+      "thriller"
+    ]
+  },
+  {
+    "id": "the-irony-of-fate",
+    "kind": "movie",
+    "title": "The Irony of Fate",
+    "year": 1975,
+    "countries": [
+      "RU"
+    ],
+    "languages": [
+      "ru"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "classic": true,
+    "originalTitle": "Ирония судьбы, или С лёгким паром!",
+    "holiday": "new-year"
+  },
+  {
+    "id": "fanny-and-alexander",
+    "kind": "movie",
+    "title": "Fanny and Alexander",
+    "year": 1982,
+    "countries": [
+      "SE"
+    ],
+    "languages": [
+      "sv"
+    ],
+    "genres": [
+      "drama"
+    ],
+    "classic": true,
+    "originalTitle": "Fanny och Alexander"
+  },
+  {
+    "id": "the-snowman",
+    "kind": "movie",
+    "title": "The Snowman",
+    "year": 1982,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "santa-claus-is-a-stinker",
+    "kind": "movie",
+    "title": "Santa Claus Is a Stinker",
+    "year": 1982,
+    "countries": [
+      "FR"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "classic": true,
+    "originalTitle": "Le père Noël est une ordure"
+  },
+  {
+    "id": "a-christmas-story",
+    "kind": "movie",
+    "title": "A Christmas Story",
+    "year": 1983,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "trading-places",
+    "kind": "movie",
+    "title": "Trading Places",
+    "year": 1983,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "mickeys-christmas-carol",
+    "kind": "movie",
+    "title": "Mickey's Christmas Carol",
+    "year": 1983,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "vacanze-di-natale",
+    "kind": "movie",
+    "title": "Vacanze di Natale",
+    "year": 1983,
+    "countries": [
+      "IT"
+    ],
+    "languages": [
+      "it"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "gremlins",
+    "kind": "movie",
+    "title": "Gremlins",
+    "year": 1984,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "horror",
+      "fantasy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "lethal-weapon",
+    "kind": "movie",
+    "title": "Lethal Weapon",
+    "year": 1987,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "action",
+      "thriller"
+    ]
+  },
+  {
+    "id": "die-hard",
+    "kind": "movie",
+    "title": "Die Hard",
+    "year": 1988,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "action",
+      "thriller"
+    ],
+    "classic": true
+  },
+  {
+    "id": "scrooged",
+    "kind": "movie",
+    "title": "Scrooged",
+    "year": 1988,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "christmas-vacation",
+    "kind": "movie",
+    "title": "National Lampoon's Christmas Vacation",
+    "year": 1989,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "home-alone",
+    "kind": "movie",
+    "title": "Home Alone",
+    "year": 1990,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "edward-scissorhands",
+    "kind": "movie",
+    "title": "Edward Scissorhands",
+    "year": 1990,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "fantasy",
+      "romance",
+      "drama"
+    ]
+  },
+  {
+    "id": "home-alone-2",
+    "kind": "movie",
+    "title": "Home Alone 2: Lost in New York",
+    "year": 1992,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "the-muppet-christmas-carol",
+    "kind": "movie",
+    "title": "The Muppet Christmas Carol",
+    "year": 1992,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "musical",
+      "fantasy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "batman-returns",
+    "kind": "movie",
+    "title": "Batman Returns",
+    "year": 1992,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "action",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "the-nightmare-before-christmas",
+    "kind": "movie",
+    "title": "The Nightmare Before Christmas",
+    "year": 1993,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "musical",
+      "fantasy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "the-santa-clause",
+    "kind": "movie",
+    "title": "The Santa Clause",
+    "year": 1994,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "while-you-were-sleeping",
+    "kind": "movie",
+    "title": "While You Were Sleeping",
+    "year": 1995,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-day-of-the-beast",
+    "kind": "movie",
+    "title": "The Day of the Beast",
+    "year": 1995,
+    "countries": [
+      "ES"
+    ],
+    "languages": [
+      "es"
+    ],
+    "genres": [
+      "horror",
+      "comedy"
+    ],
+    "originalTitle": "El día de la bestia"
+  },
+  {
+    "id": "jingle-all-the-way",
+    "kind": "movie",
+    "title": "Jingle All the Way",
+    "year": 1996,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "christmas-in-august",
+    "kind": "movie",
+    "title": "Christmas in August",
+    "year": 1998,
+    "countries": [
+      "KR"
+    ],
+    "languages": [
+      "ko"
+    ],
+    "genres": [
+      "romance",
+      "drama"
+    ],
+    "originalTitle": "8월의 크리스마스"
+  },
+  {
+    "id": "cosy-dens",
+    "kind": "movie",
+    "title": "Cosy Dens",
+    "year": 1999,
+    "countries": [
+      "CZ"
+    ],
+    "languages": [
+      "cs"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "originalTitle": "Pelíšky"
+  },
+  {
+    "id": "in-bed-with-santa",
+    "kind": "movie",
+    "title": "In Bed with Santa",
+    "year": 1999,
+    "countries": [
+      "SE"
+    ],
+    "languages": [
+      "sv"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "originalTitle": "Tomten är far till alla barnen"
+  },
+  {
+    "id": "grinch-2000",
+    "kind": "movie",
+    "title": "How the Grinch Stole Christmas",
+    "year": 2000,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "serendipity",
+    "kind": "movie",
+    "title": "Serendipity",
+    "year": 2001,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "love-actually",
+    "kind": "movie",
+    "title": "Love Actually",
+    "year": 2003,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "elf",
+    "kind": "movie",
+    "title": "Elf",
+    "year": 2003,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "classic": true
+  },
+  {
+    "id": "bad-santa",
+    "kind": "movie",
+    "title": "Bad Santa",
+    "year": 2003,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "tokyo-godfathers",
+    "kind": "movie",
+    "title": "Tokyo Godfathers",
+    "year": 2003,
+    "countries": [
+      "JP"
+    ],
+    "languages": [
+      "ja"
+    ],
+    "genres": [
+      "animation",
+      "drama",
+      "comedy"
+    ],
+    "originalTitle": "東京ゴッドファーザーズ"
+  },
+  {
+    "id": "the-polar-express",
+    "kind": "movie",
+    "title": "The Polar Express",
+    "year": 2004,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "kiss-kiss-bang-bang",
+    "kind": "movie",
+    "title": "Kiss Kiss Bang Bang",
+    "year": 2005,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "action",
+      "comedy",
+      "thriller"
+    ]
+  },
+  {
+    "id": "the-family-stone",
+    "kind": "movie",
+    "title": "The Family Stone",
+    "year": 2005,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama",
+      "romance"
+    ]
+  },
+  {
+    "id": "joyeux-noel",
+    "kind": "movie",
+    "title": "Joyeux Noël",
+    "year": 2005,
+    "countries": [
+      "FR",
+      "DE",
+      "GB"
+    ],
+    "languages": [
+      "fr",
+      "de",
+      "en"
+    ],
+    "genres": [
+      "drama"
+    ]
+  },
+  {
+    "id": "winkys-horse",
+    "kind": "movie",
+    "title": "Winky's Horse",
+    "year": 2005,
+    "countries": [
+      "NL"
+    ],
+    "languages": [
+      "nl"
+    ],
+    "genres": [
+      "family"
+    ],
+    "originalTitle": "Het paard van Sinterklaas",
+    "holiday": "sinterklaas"
+  },
+  {
+    "id": "the-holiday",
+    "kind": "movie",
+    "title": "The Holiday",
+    "year": 2006,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "christmas-story-2007",
+    "kind": "movie",
+    "title": "Christmas Story",
+    "year": 2007,
+    "countries": [
+      "FI"
+    ],
+    "languages": [
+      "fi"
+    ],
+    "genres": [
+      "family",
+      "drama",
+      "fantasy"
+    ],
+    "originalTitle": "Joulutarina"
+  },
+  {
+    "id": "a-christmas-tale",
+    "kind": "movie",
+    "title": "A Christmas Tale",
+    "year": 2008,
+    "countries": [
+      "FR"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "genres": [
+      "drama",
+      "comedy"
+    ],
+    "originalTitle": "Un conte de Noël"
+  },
+  {
+    "id": "four-christmases",
+    "kind": "movie",
+    "title": "Four Christmases",
+    "year": 2008,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ]
+  },
+  {
+    "id": "nativity",
+    "kind": "movie",
+    "title": "Nativity!",
+    "year": 2009,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "rare-exports",
+    "kind": "movie",
+    "title": "Rare Exports: A Christmas Tale",
+    "year": 2010,
+    "countries": [
+      "FI"
+    ],
+    "languages": [
+      "fi",
+      "en"
+    ],
+    "genres": [
+      "horror",
+      "fantasy",
+      "comedy"
+    ],
+    "originalTitle": "Rare Exports"
+  },
+  {
+    "id": "letters-to-santa",
+    "kind": "movie",
+    "title": "Letters to Santa",
+    "year": 2011,
+    "countries": [
+      "PL"
+    ],
+    "languages": [
+      "pl"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ],
+    "originalTitle": "Listy do M."
+  },
+  {
+    "id": "arthur-christmas",
+    "kind": "movie",
+    "title": "Arthur Christmas",
+    "year": 2011,
+    "countries": [
+      "GB",
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "comedy"
+    ]
+  },
+  {
+    "id": "journey-to-the-christmas-star",
+    "kind": "movie",
+    "title": "Journey to the Christmas Star",
+    "year": 2012,
+    "countries": [
+      "NO"
+    ],
+    "languages": [
+      "no"
+    ],
+    "genres": [
+      "fantasy",
+      "family"
+    ],
+    "originalTitle": "Reisen til julestjernen"
+  },
+  {
+    "id": "carol",
+    "kind": "movie",
+    "title": "Carol",
+    "year": 2015,
+    "countries": [
+      "US",
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "drama"
+    ]
+  },
+  {
+    "id": "krampus",
+    "kind": "movie",
+    "title": "Krampus",
+    "year": 2015,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "horror",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-night-before",
+    "kind": "movie",
+    "title": "The Night Before",
+    "year": 2015,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "office-christmas-party",
+    "kind": "movie",
+    "title": "Office Christmas Party",
+    "year": 2016,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "snekker-andersen",
+    "kind": "movie",
+    "title": "Snekker Andersen og Julenissen",
+    "year": 2016,
+    "countries": [
+      "NO"
+    ],
+    "languages": [
+      "no"
+    ],
+    "genres": [
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "anna-and-the-apocalypse",
+    "kind": "movie",
+    "title": "Anna and the Apocalypse",
+    "year": 2017,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "horror",
+      "musical",
+      "comedy"
+    ]
+  },
+  {
+    "id": "santa-and-co",
+    "kind": "movie",
+    "title": "Santa & Co.",
+    "year": 2017,
+    "countries": [
+      "FR"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "originalTitle": "Santa & Cie"
+  },
+  {
+    "id": "the-man-who-invented-christmas",
+    "kind": "movie",
+    "title": "The Man Who Invented Christmas",
+    "year": 2017,
+    "countries": [
+      "GB",
+      "CA",
+      "IE"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama",
+      "family"
+    ]
+  },
+  {
+    "id": "a-christmas-prince",
+    "kind": "movie",
+    "title": "A Christmas Prince",
+    "year": 2017,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance"
+    ]
+  },
+  {
+    "id": "buek",
+    "kind": "movie",
+    "title": "BÚÉK",
+    "year": 2018,
+    "countries": [
+      "HU"
+    ],
+    "languages": [
+      "hu"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "holiday": "new-year"
+  },
+  {
+    "id": "the-christmas-chronicles",
+    "kind": "movie",
+    "title": "The Christmas Chronicles",
+    "year": 2018,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "fantasy",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-princess-switch",
+    "kind": "movie",
+    "title": "The Princess Switch",
+    "year": 2018,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "klaus",
+    "kind": "movie",
+    "title": "Klaus",
+    "year": 2019,
+    "countries": [
+      "ES"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "comedy"
+    ]
+  },
+  {
+    "id": "last-christmas",
+    "kind": "movie",
+    "title": "Last Christmas",
+    "year": 2019,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "happiest-season",
+    "kind": "movie",
+    "title": "Happiest Season",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "jingle-jangle",
+    "kind": "movie",
+    "title": "Jingle Jangle: A Christmas Journey",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "musical",
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "just-another-christmas",
+    "kind": "movie",
+    "title": "Just Another Christmas",
+    "year": 2020,
+    "countries": [
+      "BR"
+    ],
+    "languages": [
+      "pt"
+    ],
+    "genres": [
+      "comedy",
+      "fantasy"
+    ],
+    "originalTitle": "Tudo Bem No Natal Que Vem"
+  },
+  {
+    "id": "a-sunburnt-christmas",
+    "kind": "movie",
+    "title": "A Sunburnt Christmas",
+    "year": 2020,
+    "countries": [
+      "AU"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "a-boy-called-christmas",
+    "kind": "movie",
+    "title": "A Boy Called Christmas",
+    "year": 2021,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "single-all-the-way",
+    "kind": "movie",
+    "title": "Single All the Way",
+    "year": 2021,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "carol-of-the-bells",
+    "kind": "movie",
+    "title": "Carol of the Bells",
+    "year": 2022,
+    "countries": [
+      "UA"
+    ],
+    "languages": [
+      "uk"
+    ],
+    "genres": [
+      "drama"
+    ],
+    "originalTitle": "Щедрик"
+  },
+  {
+    "id": "spirited",
+    "kind": "movie",
+    "title": "Spirited",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "musical",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "violent-night",
+    "kind": "movie",
+    "title": "Violent Night",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "action",
+      "comedy"
+    ]
+  },
+  {
+    "id": "falling-for-christmas",
+    "kind": "movie",
+    "title": "Falling for Christmas",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-holdovers",
+    "kind": "movie",
+    "title": "The Holdovers",
+    "year": 2023,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ]
+  },
+  {
+    "id": "merry-christmas-2024",
+    "kind": "movie",
+    "title": "Merry Christmas",
+    "year": 2024,
+    "countries": [
+      "IN"
+    ],
+    "languages": [
+      "hi",
+      "ta"
+    ],
+    "genres": [
+      "thriller",
+      "drama"
+    ]
+  },
+  {
+    "id": "red-one",
+    "kind": "movie",
+    "title": "Red One",
+    "year": 2024,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "action",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "that-christmas",
+    "kind": "movie",
+    "title": "That Christmas",
+    "year": 2024,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-best-christmas-pageant-ever",
+    "kind": "movie",
+    "title": "The Best Christmas Pageant Ever",
+    "year": 2024,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-julekalender",
+    "kind": "series",
+    "title": "The Julekalender",
+    "year": 1991,
+    "countries": [
+      "DK"
+    ],
+    "languages": [
+      "da"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "classic": true
+  },
+  {
+    "id": "home-for-christmas",
+    "kind": "series",
+    "title": "Home for Christmas",
+    "year": 2019,
+    "countries": [
+      "NO"
+    ],
+    "languages": [
+      "no"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ],
+    "originalTitle": "Hjem til jul"
+  },
+  {
+    "id": "merry-happy-whatever",
+    "kind": "series",
+    "title": "Merry Happy Whatever",
+    "year": 2019,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "dash-and-lily",
+    "kind": "series",
+    "title": "Dash & Lily",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "christmas-flow",
+    "kind": "series",
+    "title": "Christmas Flow",
+    "year": 2021,
+    "countries": [
+      "FR"
+    ],
+    "languages": [
+      "fr"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-santa-clauses",
+    "kind": "series",
+    "title": "The Santa Clauses",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "simpsons-roasting",
+    "kind": "episode",
+    "title": "Simpsons Roasting on an Open Fire",
+    "year": 1989,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "series": {
+      "title": "The Simpsons",
+      "season": 1,
+      "episode": 1,
+      "firstAired": 1989
+    },
+    "classic": true
+  },
+  {
+    "id": "simpsons-marge-be-not-proud",
+    "kind": "episode",
+    "title": "Marge Be Not Proud",
+    "year": 1995,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "series": {
+      "title": "The Simpsons",
+      "season": 7,
+      "episode": 11,
+      "firstAired": 1989
+    }
+  },
+  {
+    "id": "simpsons-miracle-on-evergreen",
+    "kind": "episode",
+    "title": "Miracle on Evergreen Terrace",
+    "year": 1997,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "series": {
+      "title": "The Simpsons",
+      "season": 9,
+      "episode": 10,
+      "firstAired": 1989
+    }
+  },
+  {
+    "id": "frasier-miracle",
+    "kind": "episode",
+    "title": "Miracle on Third or Fourth Street",
+    "year": 1993,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Frasier",
+      "season": 1,
+      "episode": 12,
+      "firstAired": 1993
+    }
+  },
+  {
+    "id": "friends-phoebes-dad",
+    "kind": "episode",
+    "title": "The One with Phoebe's Dad",
+    "year": 1995,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Friends",
+      "season": 2,
+      "episode": 9,
+      "firstAired": 1994
+    }
+  },
+  {
+    "id": "friends-rachel-quits",
+    "kind": "episode",
+    "title": "The One Where Rachel Quits",
+    "year": 1996,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "series": {
+      "title": "Friends",
+      "season": 3,
+      "episode": 10,
+      "firstAired": 1994
+    }
+  },
+  {
+    "id": "friends-holiday-armadillo",
+    "kind": "episode",
+    "title": "The One with the Holiday Armadillo",
+    "year": 2000,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Friends",
+      "season": 7,
+      "episode": 10,
+      "firstAired": 1994
+    },
+    "classic": true
+  },
+  {
+    "id": "south-park-mr-hankey",
+    "kind": "episode",
+    "title": "Mr. Hankey, the Christmas Poo",
+    "year": 1997,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "series": {
+      "title": "South Park",
+      "season": 1,
+      "episode": 9,
+      "firstAired": 1997
+    }
+  },
+  {
+    "id": "seinfeld-the-strike",
+    "kind": "episode",
+    "title": "The Strike",
+    "year": 1997,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Seinfeld",
+      "season": 9,
+      "episode": 10,
+      "firstAired": 1989
+    },
+    "classic": true
+  },
+  {
+    "id": "mr-bean-christmas",
+    "kind": "episode",
+    "title": "Merry Christmas Mr. Bean",
+    "year": 1992,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "series": {
+      "title": "Mr. Bean",
+      "season": 1,
+      "episode": 7,
+      "firstAired": 1990
+    },
+    "classic": true
+  },
+  {
+    "id": "futurama-xmas-story",
+    "kind": "episode",
+    "title": "Xmas Story",
+    "year": 1999,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "series": {
+      "title": "Futurama",
+      "season": 2,
+      "episode": 4,
+      "firstAired": 1999
+    }
+  },
+  {
+    "id": "west-wing-noel",
+    "kind": "episode",
+    "title": "Noël",
+    "year": 2000,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama"
+    ],
+    "series": {
+      "title": "The West Wing",
+      "season": 2,
+      "episode": 10,
+      "firstAired": 1999
+    }
+  },
+  {
+    "id": "gilmore-girls-forgiveness",
+    "kind": "episode",
+    "title": "Forgiveness and Stuff",
+    "year": 2000,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama",
+      "comedy"
+    ],
+    "series": {
+      "title": "Gilmore Girls",
+      "season": 1,
+      "episode": 10,
+      "firstAired": 2000
+    }
+  },
+  {
+    "id": "scrubs-my-own-personal-jesus",
+    "kind": "episode",
+    "title": "My Own Personal Jesus",
+    "year": 2001,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "series": {
+      "title": "Scrubs",
+      "season": 1,
+      "episode": 11,
+      "firstAired": 2001
+    }
+  },
+  {
+    "id": "the-oc-chrismukkah",
+    "kind": "episode",
+    "title": "The Best Chrismukkah Ever",
+    "year": 2003,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama",
+      "romance"
+    ],
+    "series": {
+      "title": "The O.C.",
+      "season": 1,
+      "episode": 13,
+      "firstAired": 2003
+    }
+  },
+  {
+    "id": "arrested-development-afternoon-delight",
+    "kind": "episode",
+    "title": "Afternoon Delight",
+    "year": 2004,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Arrested Development",
+      "season": 2,
+      "episode": 6,
+      "firstAired": 2003
+    }
+  },
+  {
+    "id": "the-office-christmas-party",
+    "kind": "episode",
+    "title": "Christmas Party",
+    "year": 2005,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "The Office",
+      "season": 2,
+      "episode": 10,
+      "firstAired": 2005
+    }
+  },
+  {
+    "id": "office-benihana-christmas",
+    "kind": "episode",
+    "title": "A Benihana Christmas",
+    "year": 2006,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "The Office",
+      "season": 3,
+      "episode": 10,
+      "firstAired": 2005
+    }
+  },
+  {
+    "id": "office-moroccan-christmas",
+    "kind": "episode",
+    "title": "Moroccan Christmas",
+    "year": 2008,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "The Office",
+      "season": 5,
+      "episode": 11,
+      "firstAired": 2005
+    }
+  },
+  {
+    "id": "office-secret-santa",
+    "kind": "episode",
+    "title": "Secret Santa",
+    "year": 2009,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "The Office",
+      "season": 6,
+      "episode": 13,
+      "firstAired": 2005
+    }
+  },
+  {
+    "id": "himym-lily-stole-christmas",
+    "kind": "episode",
+    "title": "How Lily Stole Christmas",
+    "year": 2006,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "series": {
+      "title": "How I Met Your Mother",
+      "season": 2,
+      "episode": 11,
+      "firstAired": 2005
+    }
+  },
+  {
+    "id": "always-sunny-christmas",
+    "kind": "episode",
+    "title": "A Very Sunny Christmas",
+    "year": 2010,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "It's Always Sunny in Philadelphia",
+      "season": 6,
+      "episode": 13,
+      "firstAired": 2005
+    }
+  },
+  {
+    "id": "30-rock-ludachristmas",
+    "kind": "episode",
+    "title": "Ludachristmas",
+    "year": 2007,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "30 Rock",
+      "season": 2,
+      "episode": 9,
+      "firstAired": 2006
+    }
+  },
+  {
+    "id": "big-bang-bath-item",
+    "kind": "episode",
+    "title": "The Bath Item Gift Hypothesis",
+    "year": 2008,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "The Big Bang Theory",
+      "season": 2,
+      "episode": 11,
+      "firstAired": 2007
+    }
+  },
+  {
+    "id": "community-abeds-christmas",
+    "kind": "episode",
+    "title": "Abed's Uncontrollable Christmas",
+    "year": 2010,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "animation"
+    ],
+    "series": {
+      "title": "Community",
+      "season": 2,
+      "episode": 11,
+      "firstAired": 2009
+    }
+  },
+  {
+    "id": "community-regional-holiday-music",
+    "kind": "episode",
+    "title": "Regional Holiday Music",
+    "year": 2011,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "musical"
+    ],
+    "series": {
+      "title": "Community",
+      "season": 3,
+      "episode": 10,
+      "firstAired": 2009
+    }
+  },
+  {
+    "id": "modern-family-undeck-the-halls",
+    "kind": "episode",
+    "title": "Undeck the Halls",
+    "year": 2009,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "series": {
+      "title": "Modern Family",
+      "season": 1,
+      "episode": 10,
+      "firstAired": 2009
+    }
+  },
+  {
+    "id": "parks-citizen-knope",
+    "kind": "episode",
+    "title": "Citizen Knope",
+    "year": 2011,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Parks and Recreation",
+      "season": 4,
+      "episode": 10,
+      "firstAired": 2009
+    }
+  },
+  {
+    "id": "family-guy-road-to-north-pole",
+    "kind": "episode",
+    "title": "Road to the North Pole",
+    "year": 2010,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "musical"
+    ],
+    "series": {
+      "title": "Family Guy",
+      "season": 9,
+      "episode": 7,
+      "firstAired": 1999
+    }
+  },
+  {
+    "id": "downton-christmas",
+    "kind": "episode",
+    "title": "Christmas at Downton Abbey",
+    "year": 2011,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama",
+      "romance"
+    ],
+    "series": {
+      "title": "Downton Abbey",
+      "season": 2,
+      "episode": 9,
+      "firstAired": 2010
+    }
+  },
+  {
+    "id": "new-girl-the-23rd",
+    "kind": "episode",
+    "title": "The 23rd",
+    "year": 2011,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "series": {
+      "title": "New Girl",
+      "season": 1,
+      "episode": 10,
+      "firstAired": 2011
+    }
+  },
+  {
+    "id": "brooklyn-99-christmas",
+    "kind": "episode",
+    "title": "Christmas",
+    "year": 2013,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ],
+    "series": {
+      "title": "Brooklyn Nine-Nine",
+      "season": 1,
+      "episode": 11,
+      "firstAired": 2013
+    }
+  },
+  {
+    "id": "rick-and-morty-anatomy-park",
+    "kind": "episode",
+    "title": "Anatomy Park",
+    "year": 2013,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy"
+    ],
+    "series": {
+      "title": "Rick and Morty",
+      "season": 1,
+      "episode": 3,
+      "firstAired": 2013
+    }
+  },
+  {
+    "id": "bobs-burgers-christmas-in-the-car",
+    "kind": "episode",
+    "title": "Christmas in the Car",
+    "year": 2013,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ],
+    "series": {
+      "title": "Bob's Burgers",
+      "season": 4,
+      "episode": 8,
+      "firstAired": 2011
+    }
+  },
+  {
+    "id": "black-mirror-white-christmas",
+    "kind": "episode",
+    "title": "White Christmas",
+    "year": 2014,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "thriller",
+      "drama"
+    ],
+    "series": {
+      "title": "Black Mirror",
+      "season": 2,
+      "episode": 4,
+      "firstAired": 2011
+    }
+  },
+  {
+    "id": "bluey-verandah-santa",
+    "kind": "episode",
+    "title": "Verandah Santa",
+    "year": 2019,
+    "countries": [
+      "AU"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family"
+    ],
+    "series": {
+      "title": "Bluey",
+      "season": 2,
+      "episode": 26,
+      "firstAired": 2018
+    }
+  },
+  {
+    "id": "ted-lasso-carol-of-the-bells",
+    "kind": "episode",
+    "title": "Carol of the Bells",
+    "year": 2021,
+    "countries": [
+      "US",
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "series": {
+      "title": "Ted Lasso",
+      "season": 2,
+      "episode": 4,
+      "firstAired": 2020
+    }
+  }
+]
