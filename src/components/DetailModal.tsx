@@ -20,7 +20,7 @@ const justWatchSearch = (region: string, query: string) =>
   `https://www.justwatch.com/${region === 'GB' ? 'uk' : region.toLowerCase()}/search?q=${encodeURIComponent(query)}`
 
 export function DetailModal({ title, availability, providers, synced, hasLanguageData, siblings, onOpen, onClose }: Props) {
-  const { t, format, names, region, localTitle, overview } = useApp()
+  const { t, format, names, region, localTitle, overview, episodeLabel } = useApp()
   const closeButton = useRef<HTMLButtonElement>(null)
   const name = localTitle(title)
   const regionName = names.region(region)
@@ -40,7 +40,7 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
   }, [onClose])
 
   const facts = [
-    title.series && `${title.series.title} · ${format(t.seasonEpisode, { season: title.series.season, episode: title.series.episode })}`,
+    title.series && `${title.series.title} · ${episodeLabel(title.series)}`,
     String(title.year),
     t.kind[title.kind],
     title.runtime && format(t.minutes, { n: title.runtime }),
@@ -145,7 +145,7 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
                     <li key={episode.id}>
                       <button onClick={() => onOpen(episode.id)}>
                         <span className="siblings__number">
-                          {format(t.seasonEpisode, { season: episode.series!.season, episode: episode.series!.episode })}
+                          {episodeLabel(episode.series!)}
                         </span>
                         <span>{localTitle(episode)}</span>
                         <span className="muted">{episode.year}</span>

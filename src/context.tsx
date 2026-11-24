@@ -1,7 +1,7 @@
 import { createContext, useContext, useMemo, type ReactNode } from 'react'
 import type { Locale } from './config'
 import { dictionaries, displayNames, format, type Dictionary } from './i18n'
-import type { Title } from './types'
+import type { EpisodeRef, Title } from './types'
 
 interface AppContext {
   locale: Locale
@@ -11,6 +11,7 @@ interface AppContext {
   names: ReturnType<typeof displayNames>
   localTitle: (title: Title) => string
   overview: (title: Title) => string | undefined
+  episodeLabel: (episode: EpisodeRef) => string
 }
 
 const Context = createContext<AppContext | null>(null)
@@ -25,6 +26,8 @@ export function AppProvider({ locale, region, children }: { locale: Locale; regi
       names: displayNames(locale),
       localTitle: (title) => title.titles?.[locale] ?? title.title,
       overview: (title) => title.overviews?.[locale] ?? title.overviews?.en,
+      episodeLabel: ({ season, episode }) =>
+        season === 0 ? dictionaries[locale].special : format(dictionaries[locale].seasonEpisode, { season, episode }),
     }),
     [locale, region],
   )

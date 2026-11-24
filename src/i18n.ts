@@ -52,6 +52,7 @@ export interface Dictionary {
   contribute: string
   syncedAt: string
   seasonEpisode: string
+  special: string
   scrollLeft: string
   scrollRight: string
   watchOn: string
@@ -120,6 +121,7 @@ const en: Dictionary = {
   contribute: 'Missing a favourite? Add it on GitHub',
   syncedAt: 'Availability updated {date}',
   seasonEpisode: 'S{season} · E{episode}',
+  special: 'Special',
   scrollLeft: 'Scroll left',
   scrollRight: 'Scroll right',
   watchOn: 'Watch on {provider}',
@@ -188,6 +190,7 @@ const hu: Dictionary = {
   contribute: 'Hiányzik a kedvenced? Add hozzá GitHubon',
   syncedAt: 'Elérhetőség frissítve: {date}',
   seasonEpisode: '{season}. évad · {episode}. rész',
+  special: 'Különkiadás',
   scrollLeft: 'Görgetés balra',
   scrollRight: 'Görgetés jobbra',
   watchOn: 'Megnézem: {provider}',
@@ -256,6 +259,7 @@ const de: Dictionary = {
   contribute: 'Fehlt dein Liebling? Füge ihn auf GitHub hinzu',
   syncedAt: 'Verfügbarkeit aktualisiert am {date}',
   seasonEpisode: 'S{season} · F{episode}',
+  special: 'Special',
   scrollLeft: 'Nach links scrollen',
   scrollRight: 'Nach rechts scrollen',
   watchOn: 'Ansehen bei {provider}',

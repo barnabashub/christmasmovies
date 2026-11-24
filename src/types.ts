@@ -50,6 +50,7 @@ export interface Enrichment {
   titles: Record<string, string>
   overviews: Record<string, string>
   streamingRegions: string[]
+  episodePosition?: { season: number; episode: number }
 }
 
 export const MONETIZATIONS = ['flatrate', 'free', 'ads', 'rent', 'buy'] as const
@@ -82,4 +83,4 @@ export interface DataMeta {
   hasLanguageData: boolean
 }
 
-export interface Title extends CatalogEntry, Partial<Omit<Enrichment, 'tmdbId'>> {}
+export interface Title extends CatalogEntry, Partial<Omit<Enrichment, 'tmdbId' | 'episodePosition'>> {}

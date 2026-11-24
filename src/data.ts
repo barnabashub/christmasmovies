@@ -43,7 +43,16 @@ export function useCatalog(region: string) {
   }, [region, library.meta])
 
   const titles = useMemo<Title[]>(
-    () => entries.map((entry) => ({ ...library.enrichment[entry.id], ...entry, tmdbId: entry.tmdbId ?? library.enrichment[entry.id]?.tmdbId })),
+    () =>
+      entries.map((entry) => {
+        const { episodePosition, ...enrichment } = library.enrichment[entry.id] ?? {}
+        return {
+          ...enrichment,
+          ...entry,
+          tmdbId: entry.tmdbId ?? enrichment.tmdbId,
+          series: entry.series && { ...entry.series, ...episodePosition },
+        }
+      }),
     [library.enrichment],
   )
 

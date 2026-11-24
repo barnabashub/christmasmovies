@@ -56,6 +56,9 @@ TMDB_TOKEN=… npm run sync   # optional: fetch metadata & availability into pub
 
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions**
 2. **Settings → Secrets and variables → Actions**: add `TMDB_TOKEN` (and optionally `RAPIDAPI_KEY`)
+   - For `RAPIDAPI_KEY`, subscribe to the *Streaming Availability* API on RapidAPI first (the free Basic plan
+     works) — otherwise every request is rejected with 403. Responses are cached between runs (`actions/cache`)
+     and at most `RAPIDAPI_LIMIT` (default 80) titles are refreshed per run, so the free quota is enough.
 3. Push to `main`. The workflow validates, tests, syncs, builds and deploys — and re-runs nightly.
 
 ## Contributing titles

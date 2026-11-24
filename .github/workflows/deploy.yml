@@ -32,6 +32,11 @@ jobs:
       - run: npm ci
       - run: npm run validate
       - run: npm test
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: streaming-availability-${{ github.run_id }}
+          restore-keys: streaming-availability-
       - name: Sync metadata & streaming availability
         if: env.TMDB_TOKEN != ''
         run: npm run sync
