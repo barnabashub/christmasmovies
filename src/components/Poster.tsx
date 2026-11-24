@@ -1,7 +1,7 @@
 import { TMDB_IMAGE } from '../config'
 import { useApp } from '../context'
-import { flag } from '../i18n'
 import type { Title } from '../types'
+import { Flag } from './Flag'
 
 const PALETTES = [
   ['#7f1d1d', '#ef4444'],
@@ -40,7 +40,10 @@ export function Poster({ title }: { title: Title }) {
       {title.series && <span className="poster__series">{title.series.title}</span>}
       <span className="poster__title">{name}</span>
       <span className="poster__meta">
-        {title.countries.map(flag).join(' ')} {title.year}
+        {title.countries.map((c) => (
+          <Flag key={c} region={c} />
+        ))}{' '}
+        {title.year}
       </span>
     </div>
   )

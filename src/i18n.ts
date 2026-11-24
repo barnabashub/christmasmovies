@@ -20,7 +20,6 @@ export interface Dictionary {
   originalLanguage: string
   decade: string
   occasion: string
-  provider: string
   audio: string
   subtitles: string
   streamableOnly: string
@@ -53,8 +52,12 @@ export interface Dictionary {
   contribute: string
   syncedAt: string
   seasonEpisode: string
+  special: string
   scrollLeft: string
   scrollRight: string
+  watchOn: string
+  moreEpisodes: string
+  providerIn: string
 }
 
 const en: Dictionary = {
@@ -79,14 +82,13 @@ const en: Dictionary = {
     romance: 'Romance',
     thriller: 'Thriller',
   },
-  holiday: { christmas: 'Christmas', 'new-year': "New Year's Eve", sinterklaas: 'Sinterklaas' },
+  holiday: { christmas: 'Christmas', 'new-year': "New Year's Eve" },
   sort: { relevance: 'Relevance', newest: 'Newest', oldest: 'Oldest', rating: 'Top rated', title: 'A–Z' },
   offer: { flatrate: 'Subscription', free: 'Free', ads: 'Free with ads', rent: 'Rent', buy: 'Buy' },
   country: 'Country of origin',
   originalLanguage: 'Original language',
   decade: 'Decade',
   occasion: 'Occasion',
-  provider: 'Streaming service',
   audio: 'Audio',
   subtitles: 'Subtitles',
   streamableOnly: 'Streamable in {region}',
@@ -119,8 +121,12 @@ const en: Dictionary = {
   contribute: 'Missing a favourite? Add it on GitHub',
   syncedAt: 'Availability updated {date}',
   seasonEpisode: 'S{season} · E{episode}',
+  special: 'Special',
   scrollLeft: 'Scroll left',
   scrollRight: 'Scroll right',
+  watchOn: 'Watch on {provider}',
+  moreEpisodes: 'More Christmas episodes of {series}',
+  providerIn: 'Streaming service in {region}',
 }
 
 const hu: Dictionary = {
@@ -145,14 +151,13 @@ const hu: Dictionary = {
     romance: 'Romantikus',
     thriller: 'Thriller',
   },
-  holiday: { christmas: 'Karácsony', 'new-year': 'Szilveszter', sinterklaas: 'Sinterklaas' },
+  holiday: { christmas: 'Karácsony', 'new-year': 'Szilveszter' },
   sort: { relevance: 'Relevancia', newest: 'Legújabb', oldest: 'Legrégebbi', rating: 'Legjobbra értékelt', title: 'A–Z' },
   offer: { flatrate: 'Előfizetés', free: 'Ingyenes', ads: 'Ingyenes, reklámokkal', rent: 'Kölcsönzés', buy: 'Vásárlás' },
   country: 'Származási ország',
   originalLanguage: 'Eredeti nyelv',
   decade: 'Évtized',
   occasion: 'Alkalom',
-  provider: 'Streaming szolgáltató',
   audio: 'Szinkron / hang',
   subtitles: 'Felirat',
   streamableOnly: 'Streamelhető itt: {region}',
@@ -185,8 +190,12 @@ const hu: Dictionary = {
   contribute: 'Hiányzik a kedvenced? Add hozzá GitHubon',
   syncedAt: 'Elérhetőség frissítve: {date}',
   seasonEpisode: '{season}. évad · {episode}. rész',
+  special: 'Különkiadás',
   scrollLeft: 'Görgetés balra',
   scrollRight: 'Görgetés jobbra',
+  watchOn: 'Megnézem: {provider}',
+  moreEpisodes: 'További karácsonyi részek: {series}',
+  providerIn: 'Szolgáltató itt: {region}',
 }
 
 const de: Dictionary = {
@@ -211,14 +220,13 @@ const de: Dictionary = {
     romance: 'Romantik',
     thriller: 'Thriller',
   },
-  holiday: { christmas: 'Weihnachten', 'new-year': 'Silvester', sinterklaas: 'Sinterklaas' },
+  holiday: { christmas: 'Weihnachten', 'new-year': 'Silvester' },
   sort: { relevance: 'Relevanz', newest: 'Neueste', oldest: 'Älteste', rating: 'Beste Bewertung', title: 'A–Z' },
   offer: { flatrate: 'Abo', free: 'Kostenlos', ads: 'Kostenlos mit Werbung', rent: 'Leihen', buy: 'Kaufen' },
   country: 'Herkunftsland',
   originalLanguage: 'Originalsprache',
   decade: 'Jahrzehnt',
   occasion: 'Anlass',
-  provider: 'Streamingdienst',
   audio: 'Tonspur',
   subtitles: 'Untertitel',
   streamableOnly: 'Streambar in {region}',
@@ -251,8 +259,12 @@ const de: Dictionary = {
   contribute: 'Fehlt dein Liebling? Füge ihn auf GitHub hinzu',
   syncedAt: 'Verfügbarkeit aktualisiert am {date}',
   seasonEpisode: 'S{season} · F{episode}',
+  special: 'Special',
   scrollLeft: 'Nach links scrollen',
   scrollRight: 'Nach rechts scrollen',
+  watchOn: 'Ansehen bei {provider}',
+  moreEpisodes: 'Weitere Weihnachtsfolgen von {series}',
+  providerIn: 'Streamingdienst in {region}',
 }
 
 export const dictionaries: Record<Locale, Dictionary> = { en, hu, de }
@@ -272,10 +284,6 @@ export function detectRegion(fallback: string) {
     if (region && /^[A-Z]{2}$/.test(region)) return region
   }
   return fallback
-}
-
-export function flag(region: string) {
-  return String.fromCodePoint(...[...region.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0)))
 }
 
 export function displayNames(locale: Locale) {

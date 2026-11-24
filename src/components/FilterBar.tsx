@@ -1,12 +1,15 @@
 import { useApp } from '../context'
 import { EMPTY_FILTERS, SORTS, isFiltering, type Filters } from '../filters'
+import { TMDB_IMAGE } from '../config'
 import { GENRES, HOLIDAYS, KINDS } from '../types'
+import { Dropdown, type DropdownOption } from './Dropdown'
+import { Flag } from './Flag'
 
 export interface FilterOptions {
   countries: string[]
   languages: string[]
   decades: number[]
-  providers: { id: number; name: string }[]
+  providers: { id: number; name: string; logo?: string; count: number }[]
   audio: string[]
   subtitles: string[]
 }
@@ -22,7 +25,7 @@ const toggle = <T,>(list: T[], value: T) => (list.includes(value) ? list.filter(
 interface SelectProps<T extends string | number> {
   label: string
   value?: T
-  options: { value: T; label: string }[]
+  options: DropdownOption<T>[]
   onChange: (value?: T) => void
 }
 
@@ -30,23 +33,12 @@ function Select<T extends string | number>({ label, value, options, onChange }: 
   const { t } = useApp()
   if (!options.length) return null
   return (
-    <label className="field">
-      <span className="field__label">{label}</span>
-      <select
-        value={value ?? ''}
-        onChange={(e) => {
-          const picked = options.find((o) => String(o.value) === e.target.value)
-          onChange(picked?.value)
-        }}
-      >
-        <option value="">{t.any}</option>
-        {options.map((o) => (
-          <option key={o.value} value={o.value}>
-            {o.label}
-          </option>
-        ))}
-      </select>
-    </label>
+    <div className="field">
+      <span className="field__label" aria-hidden>
+        {label}
+      </span>
+      <Dropdown<T | undefined> label={label} value={value} options={[{ value: undefined, label: t.any }, ...options]} onChange={onChange} />
+    </div>
   )
 }
 
@@ -91,7 +83,7 @@ export function FilterBar({ filters, options, onChange }: Props) {
         <Select
           label={t.country}
           value={filters.country}
-          options={options.countries.map((c) => ({ value: c, label: names.region(c) })).sort(byName)}
+          options={options.countries.map((c) => ({ value: c, label: names.region(c), icon: <Flag region={c} /> })).sort(byName)}
           onChange={set('country')}
         />
         <Select label={t.originalLanguage} value={filters.language} options={languageOptions(options.languages)} onChange={set('language')} />
@@ -102,9 +94,14 @@ export function FilterBar({ filters, options, onChange }: Props) {
           onChange={set('decade')}
         />
         <Select
-          label={t.provider}
+          label={format(t.providerIn, { region: names.region(region) })}
           value={filters.provider}
-          options={options.providers.map((p) => ({ value: p.id, label: p.name }))}
+          options={options.providers.map((p) => ({
+            value: p.id,
+            label: p.name,
+            hint: String(p.count),
+            icon: p.logo ? <img className="dropdown__logo" src={`${TMDB_IMAGE}/w45${p.logo}`} alt="" loading="lazy" /> : undefined,
+          }))}
           onChange={set('provider')}
         />
         <Select label={t.audio} value={filters.audio} options={languageOptions(options.audio)} onChange={set('audio')} />

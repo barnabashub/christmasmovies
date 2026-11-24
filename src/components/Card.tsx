@@ -9,9 +9,9 @@ interface Props {
 }
 
 export function Card({ title, streamable, onOpen }: Props) {
-  const { t, localTitle, format } = useApp()
+  const { t, localTitle, episodeLabel } = useApp()
   const subtitle = title.series
-    ? `${title.series.title} · ${format(t.seasonEpisode, { season: title.series.season, episode: title.series.episode })}`
+    ? `${title.series.title} · ${episodeLabel(title.series)}`
     : `${title.year} · ${title.genres.map((g) => t.genre[g]).join(', ')}`
 
   return (

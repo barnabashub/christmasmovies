@@ -15,7 +15,7 @@ export const GENRES = [
 ] as const
 export type Genre = (typeof GENRES)[number]
 
-export const HOLIDAYS = ['christmas', 'new-year', 'sinterklaas'] as const
+export const HOLIDAYS = ['christmas', 'new-year'] as const
 export type Holiday = (typeof HOLIDAYS)[number]
 
 export interface EpisodeRef {
@@ -50,6 +50,7 @@ export interface Enrichment {
   titles: Record<string, string>
   overviews: Record<string, string>
   streamingRegions: string[]
+  episodePosition?: { season: number; episode: number }
 }
 
 export const MONETIZATIONS = ['flatrate', 'free', 'ads', 'rent', 'buy'] as const
@@ -65,6 +66,7 @@ export interface RegionAvailability {
   offers: Offer[]
   audio?: string[]
   subtitles?: string[]
+  deepLinks?: Record<string, string>
 }
 
 export type RegionData = Record<string, RegionAvailability>
@@ -81,4 +83,4 @@ export interface DataMeta {
   hasLanguageData: boolean
 }
 
-export interface Title extends CatalogEntry, Partial<Omit<Enrichment, 'tmdbId'>> {}
+export interface Title extends CatalogEntry, Partial<Omit<Enrichment, 'tmdbId' | 'episodePosition'>> {}

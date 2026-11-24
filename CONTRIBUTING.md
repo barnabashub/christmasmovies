@@ -13,7 +13,7 @@ with `npm run validate`.
   "countries": ["PL"],                 // ISO 3166-1 alpha-2
   "languages": ["pl"],                 // original language(s), ISO 639-1
   "genres": ["romance", "comedy"],     // action animation comedy drama family fantasy horror musical romance thriller
-  "holiday": "christmas",              // optional: christmas (default) | new-year | sinterklaas
+  "holiday": "christmas",              // optional: christmas (default) | new-year
   "classic": true,                     // optional: shows up in "Timeless classics"
   "tmdbId": 123456                     // optional: the number from the themoviedb.org URL, if auto-matching picks wrong
 }

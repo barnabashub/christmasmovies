@@ -33,6 +33,7 @@ type RegionProviders = { link?: string } & Partial<Record<(typeof MONETIZATIONS)
 
 interface Details {
   id: number
+  seasons?: { season_number: number }[]
   name?: string
   poster_path?: string
   backdrop_path?: string
@@ -51,12 +52,16 @@ interface SeasonEpisode {
 }
 
 interface StreamingOption {
+  link?: string
+  service: { name: string }
   audios?: { language: string }[]
   subtitles?: { locale: { language: string } }[]
 }
 
 const TMDB = 'https://api.themoviedb.org/3'
 const STREAMING_AVAILABILITY = 'https://streaming-availability.p.rapidapi.com'
+const CACHE_FILE = new URL('../.cache/streaming-availability.json', import.meta.url)
+const DAY_MS = 86_400_000
 const OUT = new URL('../public/data/', import.meta.url)
 const PREFERRED_COUNTRY: Record<string, string> = { en: 'US', hu: 'HU', de: 'DE' }
 const STREAMABLE = new Set(['flatrate', 'free', 'ads'])
@@ -67,6 +72,7 @@ const BIBLIOGRAPHIC_CODES: Record<string, string> = {
 
 const tmdbToken = process.env.TMDB_TOKEN
 const rapidApiKey = process.env.RAPIDAPI_KEY
+const rapidApiLimit = Number(process.env.RAPIDAPI_LIMIT ?? 80)
 
 if (!tmdbToken) {
   console.error('TMDB_TOKEN (a TMDB API read access token) is required.')
@@ -75,15 +81,25 @@ if (!tmdbToken) {
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-async function request<T>(url: URL, headers: Record<string, string>): Promise<T> {
+class HttpError extends Error {
+  status: number
+
+  constructor(status: number, message: string) {
+    super(message)
+    this.status = status
+  }
+}
+
+async function request<T>(url: URL, headers: Record<string, string>, retries = 4): Promise<T> {
   for (let attempt = 1; ; attempt++) {
     const response = await fetch(url, { headers: { accept: 'application/json', ...headers } })
     if (response.ok) return (await response.json()) as T
-    if ((response.status === 429 || response.status >= 500) && attempt < 5) {
+    if ((response.status === 429 || response.status >= 500) && attempt <= retries) {
       await sleep(attempt * 1500)
       continue
     }
-    throw new Error(`${response.status} ${url.pathname}`)
+    const detail = (await response.text().catch(() => '')).slice(0, 160)
+    throw new HttpError(response.status, `${response.status} ${url.pathname} ${detail}`.trim())
   }
 }
 
@@ -131,18 +147,46 @@ function pickTranslations(translations: Translation[] = [], field: 'title' | 'na
   return picked
 }
 
-async function resolveEpisode(entry: CatalogEntry, showId: number) {
+function loadSeason(showId: number, season: number) {
+  return cached(`season/${showId}/${season}`, () =>
+    tmdb<{ episodes: SeasonEpisode[] }>(`/tv/${showId}/season/${season}`).catch(() => ({ episodes: [] })),
+  )
+}
+
+async function locateEpisode(entry: CatalogEntry, show: Details) {
   const { season, episode, title } = entry.series!
-  const { episodes } = await cached(`season/${showId}/${season}`, () =>
-    tmdb<{ episodes: SeasonEpisode[] }>(`/tv/${showId}/season/${season}`),
-  )
-  const byName = episodes.find((e) => normalize(e.name) === normalize(entry.title))
-  if (!byName) console.warn(`⚠ ${entry.id}: "${entry.title}" not found in ${title} S${season}, using E${episode}`)
-  const number = byName?.episode_number ?? episode
-  return tmdb<Details & { still_path?: string }>(
-    `/tv/${showId}/season/${season}/episode/${number}`,
-    { append_to_response: 'translations' },
-  )
+  const wanted = normalize(entry.title)
+  const others = (show.seasons ?? []).map((s) => s.season_number).filter((n) => n !== season)
+  const passes: [number[], (name: string) => boolean][] = [
+    [[season, ...others], (name) => normalize(name) === wanted],
+    [[season, ...others], (name) => normalize(name).includes(wanted)],
+  ]
+  for (const [seasons, matches] of passes) {
+    for (const number of seasons) {
+      const found = (await loadSeason(show.id, number)).episodes?.find((e) => matches(e.name))
+      if (!found) continue
+      if (number !== season || found.episode_number !== episode) {
+        console.warn(`ℹ ${entry.id}: TMDB lists "${entry.title}" as S${number}E${found.episode_number}`)
+      }
+      return { season: number, episode: found.episode_number }
+    }
+  }
+  console.warn(`⚠ ${entry.id}: "${entry.title}" not found in ${title}, trying S${season}E${episode}`)
+  return { season, episode }
+}
+
+async function loadEpisode(entry: CatalogEntry, show: Details) {
+  const position = await locateEpisode(entry, show)
+  try {
+    const details = await tmdb<Details & { still_path?: string }>(
+      `/tv/${show.id}/season/${position.season}/episode/${position.episode}`,
+      { append_to_response: 'translations' },
+    )
+    return { position, details }
+  } catch {
+    console.warn(`⚠ ${entry.id}: no episode details, using series data`)
+    return undefined
+  }
 }
 
 interface Synced {
@@ -173,15 +217,16 @@ async function syncEntry(entry: CatalogEntry): Promise<Synced | undefined> {
   }
 
   if (entry.kind === 'episode') {
-    const episode = await resolveEpisode(entry, id)
-    const episodeTranslations = episode.translations?.translations
+    const episode = await loadEpisode(entry, show)
+    const episodeTranslations = episode?.details.translations?.translations
     return {
       providers,
       enrichment: {
         ...base,
-        backdrop: episode.still_path ?? show.backdrop_path,
-        rating: episode.vote_average || undefined,
-        runtime: episode.runtime ?? show.episode_run_time?.[0],
+        episodePosition: episode?.position,
+        backdrop: episode?.details.still_path ?? show.backdrop_path,
+        rating: episode?.details.vote_average || undefined,
+        runtime: episode?.details.runtime ?? show.episode_run_time?.[0],
         titles: pickTranslations(episodeTranslations, 'name'),
         overviews: pickTranslations(episodeTranslations, 'overview'),
       },
@@ -211,18 +256,72 @@ function toLanguage(code: string) {
   }
 }
 
-async function loadLanguages(imdbId: string) {
+const serviceKey = (name: string) => normalize(name.replace(/\+/g, 'plus'))
+const sameService = (a: string, b: string) => {
+  const [x, y] = [serviceKey(a), serviceKey(b)]
+  return x.includes(y) || y.includes(x)
+}
+
+type StreamingDetails = Awaited<ReturnType<typeof loadStreamingDetails>>
+
+interface CachedDetails {
+  fetchedAt: number
+  regions: StreamingDetails
+}
+
+async function loadStreamingDetails(imdbId: string) {
   const url = new URL(`${STREAMING_AVAILABILITY}/shows/${imdbId}`)
   url.searchParams.set('series_granularity', 'show')
-  const show = await request<{ streamingOptions?: Record<string, StreamingOption[]> }>(url, {
-    'x-rapidapi-key': rapidApiKey!,
-    'x-rapidapi-host': new URL(STREAMING_AVAILABILITY).host,
-  })
+  const show = await request<{ streamingOptions?: Record<string, StreamingOption[]> }>(
+    url,
+    { 'x-rapidapi-key': rapidApiKey!, 'x-rapidapi-host': new URL(STREAMING_AVAILABILITY).host },
+    2,
+  )
   return Object.entries(show.streamingOptions ?? {}).map(([country, options]) => ({
     region: country.toUpperCase(),
     audio: [...new Set(options.flatMap((o) => o.audios ?? []).map((a) => toLanguage(a.language)))].sort(),
     subtitles: [...new Set(options.flatMap((o) => o.subtitles ?? []).map((s) => toLanguage(s.locale.language)))].sort(),
+    links: options.filter((o) => o.link).map((o) => ({ service: o.service.name, url: o.link! })),
   }))
+}
+
+async function readCache(): Promise<Record<string, CachedDetails>> {
+  try {
+    return JSON.parse(await readFile(CACHE_FILE, 'utf8'))
+  } catch {
+    return {}
+  }
+}
+
+async function refreshStreamingDetails(imdbIds: string[]) {
+  const cache = await readCache()
+  const due = imdbIds
+    .filter((id) => (cache[id]?.fetchedAt ?? 0) < Date.now() - DAY_MS)
+    .sort((a, b) => (cache[a]?.fetchedAt ?? 0) - (cache[b]?.fetchedAt ?? 0))
+    .slice(0, rapidApiLimit)
+  let refreshed = 0
+  for (const imdbId of due) {
+    try {
+      cache[imdbId] = { fetchedAt: Date.now(), regions: await loadStreamingDetails(imdbId) }
+      refreshed++
+    } catch (error) {
+      const status = (error as HttpError).status
+      if (status === 401 || status === 403) {
+        console.warn(`⚠ Streaming Availability rejected the key (${(error as Error).message}).`)
+        console.warn('  Subscribe to the API (the free Basic plan is enough) on RapidAPI with the same account as RAPIDAPI_KEY.')
+        break
+      }
+      if (status === 429) {
+        console.warn('⚠ Streaming Availability rate limit reached, continuing with cached data.')
+        break
+      }
+      console.warn(`⚠ ${imdbId}: streaming details unavailable (${(error as Error).message})`)
+    }
+  }
+  await mkdir(new URL('.', CACHE_FILE), { recursive: true })
+  await writeFile(CACHE_FILE, JSON.stringify(cache))
+  console.log(`✔ Streaming Availability: ${refreshed} refreshed, ${Object.keys(cache).length} cached`)
+  return cache
 }
 
 async function mapLimit<T, R>(items: T[], limit: number, task: (item: T) => Promise<R>): Promise<R[]> {
@@ -278,25 +377,28 @@ if (!Object.keys(enrichment).length) {
   process.exit(1)
 }
 
-if (rapidApiKey) {
-  await mapLimit(entries, 2, async (entry) => {
-    const imdbId = enrichment[entry.id]?.imdbId
-    if (!imdbId) return
-    try {
-      for (const { region, audio, subtitles } of await loadLanguages(imdbId)) {
-        regions[region] ??= {}
-        regions[region][entry.id] = { ...(regions[region][entry.id] ?? { offers: [] }), audio, subtitles }
-      }
-    } catch (error) {
-      console.warn(`⚠ ${entry.id}: language data unavailable (${(error as Error).message})`)
-    }
-  })
+const imdbIds = [...new Set(Object.values(enrichment).flatMap((e) => (e.imdbId ? [e.imdbId] : [])))]
+const streamingDetails = rapidApiKey ? await refreshStreamingDetails(imdbIds) : await readCache()
+
+for (const entry of entries) {
+  const imdbId = enrichment[entry.id]?.imdbId
+  for (const { region, audio, subtitles, links } of (imdbId && streamingDetails[imdbId]?.regions) || []) {
+    regions[region] ??= {}
+    const current = regions[region][entry.id] ?? { offers: [] }
+    const deepLinks = Object.fromEntries(
+      current.offers.flatMap(({ provider }) => {
+        const match = links.find((l) => sameService(l.service, providers[provider].name))
+        return match ? [[provider, match.url]] : []
+      }),
+    )
+    regions[region][entry.id] = { ...current, audio, subtitles, deepLinks }
+  }
 }
 
 const meta: DataMeta = {
   syncedAt: new Date().toISOString(),
   regions: Object.keys(regions).sort(),
-  hasLanguageData: Boolean(rapidApiKey),
+  hasLanguageData: Object.keys(streamingDetails).length > 0,
 }
 
 const availabilityDir = new URL('availability/', OUT)
