@@ -1,6 +1,7 @@
 import { LOCALES, type Locale } from '../config'
 import { useApp } from '../context'
-import { flag } from '../i18n'
+import { Dropdown } from './Dropdown'
+import { Flag } from './Flag'
 
 interface Props {
   query: string
@@ -35,26 +36,20 @@ export function Header({ query, regions, onQuery, onRegion, onLocale, onHome }: 
         <input type="search" value={query} placeholder={t.searchPlaceholder} onChange={(e) => onQuery(e.target.value)} />
       </label>
       <div className="header__settings">
-        <label>
-          <span className="visually-hidden">{t.region}</span>
-          <select value={region} onChange={(e) => onRegion(e.target.value)} title={t.region}>
-            {sortedRegions.map((code) => (
-              <option key={code} value={code}>
-                {flag(code)} {names.region(code)}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <span className="visually-hidden">{t.uiLanguage}</span>
-          <select value={locale} onChange={(e) => onLocale(e.target.value as Locale)} title={t.uiLanguage}>
-            {LOCALES.map((code) => (
-              <option key={code} value={code}>
-                {LOCALE_LABELS[code]}
-              </option>
-            ))}
-          </select>
-        </label>
+        <Dropdown
+          label={t.region}
+          value={region}
+          align="end"
+          options={sortedRegions.map((code) => ({ value: code, label: names.region(code), icon: <Flag region={code} /> }))}
+          onChange={onRegion}
+        />
+        <Dropdown
+          label={t.uiLanguage}
+          value={locale}
+          align="end"
+          options={LOCALES.map((code) => ({ value: code, label: LOCALE_LABELS[code] }))}
+          onChange={onLocale}
+        />
       </div>
     </header>
   )

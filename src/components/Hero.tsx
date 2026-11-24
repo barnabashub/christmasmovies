@@ -1,7 +1,7 @@
 import { TMDB_IMAGE } from '../config'
 import { useApp } from '../context'
-import { flag } from '../i18n'
 import type { Title } from '../types'
+import { Flag } from './Flag'
 import { Snow } from './Snow'
 
 interface Props {
@@ -23,7 +23,11 @@ export function Hero({ title, onOpen }: Props) {
           <>
             <h1 className="hero__title">{localTitle(title)}</h1>
             <p className="hero__meta">
-              {title.year} · {title.countries.map(flag).join(' ')} · {title.genres.map((g) => t.genre[g]).join(', ')}
+              {title.year} ·{' '}
+              {title.countries.map((c) => (
+                <Flag key={c} region={c} />
+              ))}{' '}
+              · {title.genres.map((g) => t.genre[g]).join(', ')}
             </p>
             {overview(title) && <p className="hero__overview">{overview(title)}</p>}
             <button className="button button--primary" onClick={() => onOpen(title.id)}>

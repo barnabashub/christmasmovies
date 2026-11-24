@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { TMDB_IMAGE } from '../config'
 import { useApp } from '../context'
-import { flag } from '../i18n'
 import { MONETIZATIONS, type Provider, type RegionAvailability, type Title } from '../types'
+import { Flag } from './Flag'
 import { Poster } from './Poster'
 
 interface Props {
@@ -78,7 +78,7 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
               ))}
               {title.countries.map((c) => (
                 <li key={c}>
-                  {flag(c)} {names.region(c)}
+                  <Flag region={c} /> {names.region(c)}
                 </li>
               ))}
               {title.languages.map((l) => (
@@ -88,7 +88,11 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
             {overview(title) && <p className="modal__overview">{overview(title)}</p>}
 
             <section className="watch">
-              <h3>{format(t.whereToWatch, { region: `${flag(region)} ${regionName}` })}</h3>
+              <h3>
+                {t.whereToWatch.split('{region}')[0]}
+                <Flag region={region} /> {regionName}
+                {t.whereToWatch.split('{region}')[1]}
+              </h3>
               {!synced && <p className="muted">{t.noSync}</p>}
               {synced && !offers.length && <p className="muted">{format(t.notAvailable, { region: regionName })}</p>}
               {MONETIZATIONS.map((type) => {
@@ -157,9 +161,7 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
                 <summary>{format(t.streamsIn, { count: title.streamingRegions.length })}</summary>
                 <p>
                   {title.streamingRegions.map((code) => (
-                    <span key={code} title={names.region(code)}>
-                      {flag(code)}
-                    </span>
+                    <Flag key={code} region={code} title={names.region(code)} />
                   ))}
                 </p>
               </details>

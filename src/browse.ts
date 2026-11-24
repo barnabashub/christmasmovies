@@ -57,7 +57,7 @@ export function filterOptions(titles: Title[], availability: RegionData, provide
     providers: [...titleCounts]
       .filter(([id]) => providers[id])
       .sort(([a, x], [b, y]) => y - x || providers[a].name.localeCompare(providers[b].name))
-      .map(([id, count]) => ({ id, name: providers[id].name, count })),
+      .map(([id, count]) => ({ id, name: providers[id].name, logo: providers[id].logo, count })),
     audio: regional.some((r) => r.audio) ? unique(titles.flatMap((t) => [...audioLanguages(t, availability)])) : [],
     subtitles: unique(regional.flatMap((r) => r.subtitles ?? [])),
   }

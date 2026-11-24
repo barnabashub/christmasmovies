@@ -282,10 +282,6 @@ export function detectRegion(fallback: string) {
   return fallback
 }
 
-export function flag(region: string) {
-  return String.fromCodePoint(...[...region.toUpperCase()].map((c) => 0x1f1a5 + c.charCodeAt(0)))
-}
-
 export function displayNames(locale: Locale) {
   const regions = new Intl.DisplayNames([locale], { type: 'region' })
   const languages = new Intl.DisplayNames([locale], { type: 'language' })
