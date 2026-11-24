@@ -45,17 +45,28 @@ export function pickFeatured(titles: Title[], availability: RegionData) {
 export function filterOptions(titles: Title[], availability: RegionData, providers: Record<string, Provider>): FilterOptions {
   const unique = <T,>(values: T[]) => [...new Set(values)]
   const regional = Object.values(availability)
-  const providerIds = unique(regional.flatMap((r) => r.offers.map((o) => o.provider)))
+  const titleCounts = new Map<number, number>()
+  for (const { offers } of regional) {
+    for (const id of new Set(offers.map((o) => o.provider))) titleCounts.set(id, (titleCounts.get(id) ?? 0) + 1)
+  }
 
   return {
     countries: unique(titles.flatMap((t) => t.countries)),
     languages: unique(titles.flatMap((t) => t.languages)),
     decades: unique(titles.map((t) => decadeOf(t.year))).sort((a, b) => a - b),
-    providers: providerIds
-      .filter((id) => providers[id])
-      .sort((a, b) => providers[a].priority - providers[b].priority)
-      .map((id) => ({ id, name: providers[id].name })),
+    providers: [...titleCounts]
+      .filter(([id]) => providers[id])
+      .sort(([a, x], [b, y]) => y - x || providers[a].name.localeCompare(providers[b].name))
+      .map(([id, count]) => ({ id, name: providers[id].name, count })),
     audio: regional.some((r) => r.audio) ? unique(titles.flatMap((t) => [...audioLanguages(t, availability)])) : [],
     subtitles: unique(regional.flatMap((r) => r.subtitles ?? [])),
   }
+}
+
+export function siblingEpisodes(titles: Title[], episode: Title) {
+  if (!episode.series) return []
+  const series = episode.series.title
+  return titles
+    .filter((t) => t.id !== episode.id && t.series?.title === series)
+    .sort((a, b) => a.series!.season - b.series!.season || a.series!.episode - b.series!.episode)
 }

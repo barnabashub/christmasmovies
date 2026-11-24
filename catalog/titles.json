@@ -564,6 +564,22 @@
     ]
   },
   {
+    "id": "miracle-on-34th-street-1994",
+    "kind": "movie",
+    "title": "Miracle on 34th Street",
+    "year": 1994,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "fantasy"
+    ]
+  },
+  {
     "id": "while-you-were-sleeping",
     "kind": "movie",
     "title": "While You Were Sleeping",
@@ -630,6 +646,23 @@
     "originalTitle": "8월의 크리스마스"
   },
   {
+    "id": "jack-frost-1998",
+    "kind": "movie",
+    "title": "Jack Frost",
+    "year": 1998,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "fantasy",
+      "comedy"
+    ]
+  },
+  {
     "id": "cosy-dens",
     "kind": "movie",
     "title": "Cosy Dens",
@@ -693,6 +726,23 @@
     "genres": [
       "romance",
       "comedy"
+    ]
+  },
+  {
+    "id": "the-santa-clause-2",
+    "kind": "movie",
+    "title": "The Santa Clause 2",
+    "year": 2002,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
     ]
   },
   {
@@ -781,6 +831,38 @@
     ]
   },
   {
+    "id": "christmas-with-the-kranks",
+    "kind": "movie",
+    "title": "Christmas with the Kranks",
+    "year": 2004,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "surviving-christmas",
+    "kind": "movie",
+    "title": "Surviving Christmas",
+    "year": 2004,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ]
+  },
+  {
     "id": "kiss-kiss-bang-bang",
     "kind": "movie",
     "title": "Kiss Kiss Bang Bang",
@@ -847,8 +929,7 @@
     "genres": [
       "family"
     ],
-    "originalTitle": "Het paard van Sinterklaas",
-    "holiday": "sinterklaas"
+    "originalTitle": "Het paard van Sinterklaas"
   },
   {
     "id": "the-holiday",
@@ -864,6 +945,23 @@
     "genres": [
       "romance",
       "comedy"
+    ]
+  },
+  {
+    "id": "the-santa-clause-3",
+    "kind": "movie",
+    "title": "The Santa Clause 3: The Escape Clause",
+    "year": 2006,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
     ]
   },
   {
@@ -883,6 +981,23 @@
       "fantasy"
     ],
     "originalTitle": "Joulutarina"
+  },
+  {
+    "id": "shrek-the-halls",
+    "kind": "movie",
+    "title": "Shrek the Halls",
+    "year": 2007,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ]
   },
   {
     "id": "a-christmas-tale",
@@ -931,6 +1046,23 @@
     "genres": [
       "comedy",
       "family"
+    ]
+  },
+  {
+    "id": "a-christmas-carol-2009",
+    "kind": "movie",
+    "title": "A Christmas Carol",
+    "year": 2009,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "fantasy"
     ]
   },
   {
@@ -1003,6 +1135,55 @@
       "family"
     ],
     "originalTitle": "Reisen til julestjernen"
+  },
+  {
+    "id": "rise-of-the-guardians",
+    "kind": "movie",
+    "title": "Rise of the Guardians",
+    "year": 2012,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "a-madea-christmas",
+    "kind": "movie",
+    "title": "A Madea Christmas",
+    "year": 2013,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ]
+  },
+  {
+    "id": "get-santa",
+    "kind": "movie",
+    "title": "Get Santa",
+    "year": 2014,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
   },
   {
     "id": "carol",
@@ -1084,6 +1265,22 @@
     ]
   },
   {
+    "id": "almost-christmas",
+    "kind": "movie",
+    "title": "Almost Christmas",
+    "year": 2016,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ]
+  },
+  {
     "id": "anna-and-the-apocalypse",
     "kind": "movie",
     "title": "Anna and the Apocalypse",
@@ -1152,6 +1349,37 @@
     ]
   },
   {
+    "id": "a-bad-moms-christmas",
+    "kind": "movie",
+    "title": "A Bad Moms Christmas",
+    "year": 2017,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy"
+    ]
+  },
+  {
+    "id": "christmas-inheritance",
+    "kind": "movie",
+    "title": "Christmas Inheritance",
+    "year": 2017,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "drama"
+    ]
+  },
+  {
     "id": "buek",
     "kind": "movie",
     "title": "BÚÉK",
@@ -1202,6 +1430,54 @@
     ]
   },
   {
+    "id": "the-grinch-2018",
+    "kind": "movie",
+    "title": "The Grinch",
+    "year": 2018,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "the-holiday-calendar",
+    "kind": "movie",
+    "title": "The Holiday Calendar",
+    "year": 2018,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "a-christmas-prince-royal-wedding",
+    "kind": "movie",
+    "title": "A Christmas Prince: The Royal Wedding",
+    "year": 2018,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance"
+    ]
+  },
+  {
     "id": "klaus",
     "kind": "movie",
     "title": "Klaus",
@@ -1232,6 +1508,87 @@
     "genres": [
       "romance",
       "comedy"
+    ]
+  },
+  {
+    "id": "a-christmas-prince-royal-baby",
+    "kind": "movie",
+    "title": "A Christmas Prince: The Royal Baby",
+    "year": 2019,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance"
+    ]
+  },
+  {
+    "id": "the-knight-before-christmas",
+    "kind": "movie",
+    "title": "The Knight Before Christmas",
+    "year": 2019,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "fantasy",
+      "comedy"
+    ]
+  },
+  {
+    "id": "holiday-in-the-wild",
+    "kind": "movie",
+    "title": "Holiday in the Wild",
+    "year": 2019,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "drama"
+    ]
+  },
+  {
+    "id": "let-it-snow",
+    "kind": "movie",
+    "title": "Let It Snow",
+    "year": 2019,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "noelle",
+    "kind": "movie",
+    "title": "Noelle",
+    "year": 2019,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
     ]
   },
   {
@@ -1301,6 +1658,106 @@
     ]
   },
   {
+    "id": "the-claus-family",
+    "kind": "movie",
+    "title": "The Claus Family",
+    "originalTitle": "De Familie Claus",
+    "year": 2020,
+    "countries": [
+      "BE"
+    ],
+    "languages": [
+      "nl"
+    ],
+    "genres": [
+      "family",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "holidate",
+    "kind": "movie",
+    "title": "Holidate",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "operation-christmas-drop",
+    "kind": "movie",
+    "title": "Operation Christmas Drop",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-princess-switch-2",
+    "kind": "movie",
+    "title": "The Princess Switch: Switched Again",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-christmas-chronicles-2",
+    "kind": "movie",
+    "title": "The Christmas Chronicles: Part Two",
+    "year": 2020,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "family",
+      "fantasy",
+      "comedy"
+    ]
+  },
+  {
+    "id": "nagykaracsony",
+    "kind": "movie",
+    "title": "Nagykarácsony",
+    "year": 2021,
+    "countries": [
+      "HU"
+    ],
+    "languages": [
+      "hu"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ],
+    "tmdbId": 898691
+  },
+  {
     "id": "a-boy-called-christmas",
     "kind": "movie",
     "title": "A Boy Called Christmas",
@@ -1329,6 +1786,140 @@
     ],
     "genres": [
       "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-claus-family-2",
+    "kind": "movie",
+    "title": "The Claus Family 2",
+    "originalTitle": "De Familie Claus 2",
+    "year": 2021,
+    "countries": [
+      "BE"
+    ],
+    "languages": [
+      "nl"
+    ],
+    "genres": [
+      "family",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "8-bit-christmas",
+    "kind": "movie",
+    "title": "8-Bit Christmas",
+    "year": 2021,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "the-princess-switch-3",
+    "kind": "movie",
+    "title": "The Princess Switch 3: Romancing the Star",
+    "year": 2021,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "father-christmas-is-back",
+    "kind": "movie",
+    "title": "Father Christmas Is Back",
+    "year": 2021,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "family"
+    ]
+  },
+  {
+    "id": "a-naija-christmas",
+    "kind": "movie",
+    "title": "A Naija Christmas",
+    "year": 2021,
+    "countries": [
+      "NG"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "drama"
+    ]
+  },
+  {
+    "id": "david-and-the-elves",
+    "kind": "movie",
+    "title": "David and the Elves",
+    "originalTitle": "Dawid i Elfy",
+    "year": 2021,
+    "countries": [
+      "PL"
+    ],
+    "languages": [
+      "pl"
+    ],
+    "genres": [
+      "family",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "1000-miles-from-christmas",
+    "kind": "movie",
+    "title": "1000 Miles from Christmas",
+    "originalTitle": "A mil kilómetros de la Navidad",
+    "year": 2021,
+    "countries": [
+      "ES"
+    ],
+    "languages": [
+      "es"
+    ],
+    "genres": [
+      "comedy",
+      "romance"
+    ]
+  },
+  {
+    "id": "shaun-the-sheep-flight-before-christmas",
+    "kind": "movie",
+    "title": "Shaun the Sheep: The Flight Before Christmas",
+    "year": 2021,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "family",
       "comedy"
     ]
   },
@@ -1398,6 +1989,88 @@
     ]
   },
   {
+    "id": "the-claus-family-3",
+    "kind": "movie",
+    "title": "The Claus Family 3",
+    "originalTitle": "De Familie Claus 3",
+    "year": 2022,
+    "countries": [
+      "BE"
+    ],
+    "languages": [
+      "nl"
+    ],
+    "genres": [
+      "family",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "i-believe-in-santa",
+    "kind": "movie",
+    "title": "I Believe in Santa",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "christmas-with-you",
+    "kind": "movie",
+    "title": "Christmas with You",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "scrooge-a-christmas-carol",
+    "kind": "movie",
+    "title": "Scrooge: A Christmas Carol",
+    "year": 2022,
+    "countries": [
+      "GB"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "animation",
+      "musical",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "i-heard-the-bells",
+    "kind": "movie",
+    "title": "I Heard the Bells",
+    "year": 2022,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "drama"
+    ]
+  },
+  {
     "id": "the-holdovers",
     "kind": "movie",
     "title": "The Holdovers",
@@ -1411,6 +2084,40 @@
     "genres": [
       "comedy",
       "drama"
+    ]
+  },
+  {
+    "id": "genie",
+    "kind": "movie",
+    "title": "Genie",
+    "year": 2023,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "fantasy",
+      "family"
+    ]
+  },
+  {
+    "id": "candy-cane-lane",
+    "kind": "movie",
+    "title": "Candy Cane Lane",
+    "year": 2023,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "fantasy",
+      "family"
     ]
   },
   {
@@ -1478,6 +2185,88 @@
     "genres": [
       "family",
       "comedy"
+    ]
+  },
+  {
+    "id": "dear-santa",
+    "kind": "movie",
+    "title": "Dear Santa",
+    "year": 2024,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "hot-frosty",
+    "kind": "movie",
+    "title": "Hot Frosty",
+    "year": 2024,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "meet-me-next-christmas",
+    "kind": "movie",
+    "title": "Meet Me Next Christmas",
+    "year": 2024,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "our-little-secret",
+    "kind": "movie",
+    "title": "Our Little Secret",
+    "year": 2024,
+    "countries": [
+      "US"
+    ],
+    "languages": [
+      "en"
+    ],
+    "genres": [
+      "romance",
+      "comedy"
+    ]
+  },
+  {
+    "id": "the-snow-sister",
+    "kind": "movie",
+    "title": "The Snow Sister",
+    "originalTitle": "Snøsøsteren",
+    "year": 2024,
+    "countries": [
+      "NO"
+    ],
+    "languages": [
+      "no"
+    ],
+    "genres": [
+      "drama",
+      "family"
     ]
   },
   {

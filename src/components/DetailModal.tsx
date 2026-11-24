@@ -11,19 +11,22 @@ interface Props {
   providers: Record<string, Provider>
   synced: boolean
   hasLanguageData: boolean
+  siblings: Title[]
+  onOpen: (id: string) => void
   onClose: () => void
 }
 
 const justWatchSearch = (region: string, query: string) =>
   `https://www.justwatch.com/${region === 'GB' ? 'uk' : region.toLowerCase()}/search?q=${encodeURIComponent(query)}`
 
-export function DetailModal({ title, availability, providers, synced, hasLanguageData, onClose }: Props) {
+export function DetailModal({ title, availability, providers, synced, hasLanguageData, siblings, onOpen, onClose }: Props) {
   const { t, format, names, region, localTitle, overview } = useApp()
   const closeButton = useRef<HTMLButtonElement>(null)
   const name = localTitle(title)
   const regionName = names.region(region)
   const offers = availability?.offers ?? []
   const searchQuery = title.series?.title ?? title.title
+  const watchLink = availability?.link ?? justWatchSearch(region, searchQuery)
 
   useEffect(() => {
     closeButton.current?.focus()
@@ -96,12 +99,19 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
                     <span className="watch__type">{t.offer[type]}</span>
                     <ul className="watch__providers">
                       {ofType.map(({ provider }) => (
-                        <li key={provider} title={providers[provider]?.name}>
-                          {providers[provider]?.logo ? (
-                            <img src={`${TMDB_IMAGE}/w92${providers[provider].logo}`} alt={providers[provider].name} />
-                          ) : (
-                            <span>{providers[provider]?.name ?? provider}</span>
-                          )}
+                        <li key={provider}>
+                          <a
+                            href={availability?.deepLinks?.[provider] ?? watchLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            title={format(t.watchOn, { provider: providers[provider]?.name ?? provider })}
+                          >
+                            {providers[provider]?.logo ? (
+                              <img src={`${TMDB_IMAGE}/w92${providers[provider].logo}`} alt={providers[provider].name} />
+                            ) : (
+                              <span>{providers[provider]?.name ?? provider}</span>
+                            )}
+                          </a>
                         </li>
                       ))}
                     </ul>
@@ -118,10 +128,29 @@ export function DetailModal({ title, availability, providers, synced, hasLanguag
               ) : (
                 hasLanguageData && offers.length > 0 && <p className="muted">{t.languagesUnknown}</p>
               )}
-              <a className="button button--ghost" href={availability?.link ?? justWatchSearch(region, searchQuery)} target="_blank" rel="noreferrer">
+              <a className="watch__more" href={watchLink} target="_blank" rel="noreferrer">
                 {t.checkJustWatch} ↗
               </a>
             </section>
+
+            {title.series && siblings.length > 0 && (
+              <section className="siblings">
+                <h3>{format(t.moreEpisodes, { series: title.series.title })}</h3>
+                <ul>
+                  {siblings.map((episode) => (
+                    <li key={episode.id}>
+                      <button onClick={() => onOpen(episode.id)}>
+                        <span className="siblings__number">
+                          {format(t.seasonEpisode, { season: episode.series!.season, episode: episode.series!.episode })}
+                        </span>
+                        <span>{localTitle(episode)}</span>
+                        <span className="muted">{episode.year}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {title.streamingRegions && title.streamingRegions.length > 0 && (
               <details className="regions">

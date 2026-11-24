@@ -51,6 +51,8 @@ interface SeasonEpisode {
 }
 
 interface StreamingOption {
+  link?: string
+  service: { name: string }
   audios?: { language: string }[]
   subtitles?: { locale: { language: string } }[]
 }
@@ -211,7 +213,13 @@ function toLanguage(code: string) {
   }
 }
 
-async function loadLanguages(imdbId: string) {
+const serviceKey = (name: string) => normalize(name.replace(/\+/g, 'plus'))
+const sameService = (a: string, b: string) => {
+  const [x, y] = [serviceKey(a), serviceKey(b)]
+  return x.includes(y) || y.includes(x)
+}
+
+async function loadStreamingDetails(imdbId: string) {
   const url = new URL(`${STREAMING_AVAILABILITY}/shows/${imdbId}`)
   url.searchParams.set('series_granularity', 'show')
   const show = await request<{ streamingOptions?: Record<string, StreamingOption[]> }>(url, {
@@ -222,6 +230,7 @@ async function loadLanguages(imdbId: string) {
     region: country.toUpperCase(),
     audio: [...new Set(options.flatMap((o) => o.audios ?? []).map((a) => toLanguage(a.language)))].sort(),
     subtitles: [...new Set(options.flatMap((o) => o.subtitles ?? []).map((s) => toLanguage(s.locale.language)))].sort(),
+    links: options.filter((o) => o.link).map((o) => ({ service: o.service.name, url: o.link! })),
   }))
 }
 
@@ -283,12 +292,19 @@ if (rapidApiKey) {
     const imdbId = enrichment[entry.id]?.imdbId
     if (!imdbId) return
     try {
-      for (const { region, audio, subtitles } of await loadLanguages(imdbId)) {
+      for (const { region, audio, subtitles, links } of await loadStreamingDetails(imdbId)) {
         regions[region] ??= {}
-        regions[region][entry.id] = { ...(regions[region][entry.id] ?? { offers: [] }), audio, subtitles }
+        const current = regions[region][entry.id] ?? { offers: [] }
+        const deepLinks = Object.fromEntries(
+          current.offers.flatMap(({ provider }) => {
+            const match = links.find((l) => sameService(l.service, providers[provider].name))
+            return match ? [[provider, match.url]] : []
+          }),
+        )
+        regions[region][entry.id] = { ...current, audio, subtitles, deepLinks }
       }
     } catch (error) {
-      console.warn(`⚠ ${entry.id}: language data unavailable (${(error as Error).message})`)
+      console.warn(`⚠ ${entry.id}: streaming details unavailable (${(error as Error).message})`)
     }
   })
 }

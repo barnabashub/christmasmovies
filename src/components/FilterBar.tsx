@@ -6,7 +6,7 @@ export interface FilterOptions {
   countries: string[]
   languages: string[]
   decades: number[]
-  providers: { id: number; name: string }[]
+  providers: { id: number; name: string; count: number }[]
   audio: string[]
   subtitles: string[]
 }
@@ -102,9 +102,9 @@ export function FilterBar({ filters, options, onChange }: Props) {
           onChange={set('decade')}
         />
         <Select
-          label={t.provider}
+          label={format(t.providerIn, { region: names.region(region) })}
           value={filters.provider}
-          options={options.providers.map((p) => ({ value: p.id, label: p.name }))}
+          options={options.providers.map((p) => ({ value: p.id, label: `${p.name} (${p.count})` }))}
           onChange={set('provider')}
         />
         <Select label={t.audio} value={filters.audio} options={languageOptions(options.audio)} onChange={set('audio')} />

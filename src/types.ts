@@ -15,7 +15,7 @@ export const GENRES = [
 ] as const
 export type Genre = (typeof GENRES)[number]
 
-export const HOLIDAYS = ['christmas', 'new-year', 'sinterklaas'] as const
+export const HOLIDAYS = ['christmas', 'new-year'] as const
 export type Holiday = (typeof HOLIDAYS)[number]
 
 export interface EpisodeRef {
@@ -65,6 +65,7 @@ export interface RegionAvailability {
   offers: Offer[]
   audio?: string[]
   subtitles?: string[]
+  deepLinks?: Record<string, string>
 }
 
 export type RegionData = Record<string, RegionAvailability>

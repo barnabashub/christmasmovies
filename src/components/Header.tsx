@@ -19,12 +19,12 @@ export function Header({ query, regions, onQuery, onRegion, onLocale, onHome }: 
 
   return (
     <header className="header">
-      <button className="logo" onClick={onHome} aria-label="Sleighlist">
+      <button className="logo" onClick={onHome} aria-label="Christmas Movies">
         <span className="logo__mark" aria-hidden>
-          🛷
+          🎄
         </span>
         <span className="logo__word">
-          Sleigh<em>list</em>
+          Christmas <em>Movies</em>
         </span>
       </button>
       <label className="search">

@@ -696,10 +696,6 @@ select {
   margin: 0;
 }
 
-.watch .button {
-  justify-self: start;
-}
-
 .watch__group {
   display: grid;
   gap: 6px;
@@ -719,6 +715,70 @@ select {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.watch__providers a {
+  display: block;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s;
+}
+
+.watch__providers a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.watch__more {
+  justify-self: start;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.watch__more:hover {
+  color: var(--gold);
+}
+
+.siblings {
+  margin-top: 20px;
+}
+
+.siblings h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.siblings ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.siblings button {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-raised);
+  text-align: left;
+}
+
+.siblings button:hover {
+  border-color: var(--gold);
+}
+
+.siblings__number {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .watch__providers img {

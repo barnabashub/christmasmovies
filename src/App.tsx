@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from 'react'
 import { DEFAULT_REGION, LOCALES, type Locale } from './config'
 import { AppProvider } from './context'
-import { buildRows, FALLBACK_REGIONS, filterOptions, pickFeatured } from './browse'
+import { buildRows, FALLBACK_REGIONS, filterOptions, pickFeatured, siblingEpisodes } from './browse'
 import { DetailModal } from './components/DetailModal'
 import { FilterBar } from './components/FilterBar'
 import { Footer } from './components/Footer'
@@ -15,8 +15,8 @@ import { usePersistentState, useHashParams } from './hooks'
 import { detectLocale, detectRegion, dictionaries, displayNames } from './i18n'
 
 export function App() {
-  const [locale, setLocale] = usePersistentState<Locale>('sleighlist.locale', detectLocale)
-  const [region, setRegion] = usePersistentState('sleighlist.region', () => detectRegion(DEFAULT_REGION))
+  const [locale, setLocale] = usePersistentState<Locale>('christmas-movies.locale', detectLocale)
+  const [region, setRegion] = usePersistentState('christmas-movies.region', () => detectRegion(DEFAULT_REGION))
   const [params, setParams] = useHashParams()
   const { titles, availability, providers, meta } = useCatalog(region)
 
@@ -77,11 +77,14 @@ export function App() {
       <Footer syncedAt={meta?.syncedAt} />
       {openTitle && (
         <DetailModal
+          key={openTitle.id}
           title={openTitle}
           availability={availability[openTitle.id]}
           providers={providers}
           synced={Boolean(meta?.regions.includes(region))}
           hasLanguageData={Boolean(meta?.hasLanguageData)}
+          siblings={siblingEpisodes(titles, openTitle)}
+          onOpen={openDetails}
           onClose={closeDetails}
         />
       )}
